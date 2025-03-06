@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العروض المخصصة</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            background-color: #0e8112;  /* اللون الأخضر المستخدم */
+            color: white;
+            padding: 20px;
+           
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .offers {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+        .offer {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: right;
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+        .offer:hover {
+            transform: translateY(-10px);
+        }
+        .offer h2 {
+            background: #0e8112;
+            color: white;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+            font-size: 20px;
+            margin: -20px -20px 20px -20px;
+        }
+        .offer ul {
+            list-style: none;
+            padding: 0;
+        }
+        .offer ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        .offer ul li:last-child {
+            border-bottom: none;
+        }
+        .offer ul li i {
+            color: #0e8112;
+            margin-left: 10px;
+            font-size: 18px;
+        }
+        .footer {
+            background: #0e8112;
+            color: white;
+            padding: 20px;
+            font-size: 16px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white;
+            text-decoration: none;
+            color: #0e8112;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        function confirmCall() {
+            let confirmAction = confirm("هل تريد تأكيد الاتصال لترتيب حزمة مخصصة؟");
+            if (confirmAction) {
+                window.location.href = "tel:+123456789";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        العروض المخصصة
+    </header>
+    <a href="major2.html" class="back-button">الرجوع إلى الصفحة الرئيسية</a>
+    <section class="offers">
+        <div class="offer">
+            <h2>عرض الجولات</h2>
+            <ul>
+                <li><i class="fas fa-bed"></i>إقامة كاملة لمدة خمس ليالٍ في جناح فاخر</li>
+                <li><i class="fas fa-golf-ball"></i>خمس جولات - 18 حفرة</li>
+                <li><i class="fas fa-map-marker-alt"></i>جولة واحدة مضمونة في ملعب "سي فيو" الشهير</li>
+            </ul>
+        </div>
+        <div class="offer">
+            <h2>الجولة الثلاثية (Triple Tee)</h2>
+            <ul>
+                <li><i class="fas fa-hotel"></i>إقامة لمدة ليلتين في غرفة مزدوجة مع وجبة الإفطار</li>
+                <li><i class="fas fa-golf-club"></i>ثلاث جولات - 18 حفرة</li>
+                <li><i class="fas fa-car"></i>تأجير مجاني للعربات وخصم 20% لمتجر المحترفين</li>
+            </ul>
+        </div>
+        <div class="offer">
+            <h2>عرض الاستجمام</h2>
+            <ul>
+                <li><i class="fas fa-spa"></i>إقامة ليلة واحدة مع وجبة إفطار كاملة</li>
+                <li><i class="fas fa-utensils"></i>تناول العشاء في أي من مطاعم المنتجع</li>
+                <li><i class="fas fa-dumbbell"></i>تأجير نادي مجاني</li>
+            </ul>
+        </div>
+    </section>
+    <div class="footer">
+        تتوفر الحزم المخصصة للفعاليات المؤسسية والإقامات الطويلة. يجب على العملاء الاتصال بالشركة لترتيب أي حزم مخصصة. للاستفسار، يرجى <a href="#" onclick="confirmCall()">الاتصال بنا</a>.<br>
+    </div>
+</body>
+</html>

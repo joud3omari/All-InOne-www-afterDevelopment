@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخدمات المقدمة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* إعداد الخطوط والأساسيات */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #dde8e3);
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+        header {
+            text-align: center;
+            background-color: #0e8112;  /* اللون الأخضر المستخدم */
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin: 0;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: 500;
+            margin-top: 40px;
+            color: #333;
+        }
+        /* زر الرجوع */
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ddd;
+            text-decoration: none;
+            color: black;
+            border-radius: 5px;
+        }
+        .back-button:hover {
+            background-color: #0a6f0c;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        /* الحاويات */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 50px 10px;
+        }
+        .service-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover img {
+            transform: scale(1.1);
+        }
+        .service-card .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+        .service-card .card-content h3 {
+            font-size: 22px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .service-card .card-content p {
+            color: #777;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .service-card .card-content a {
+            display: inline-block;
+            background-color: #0e8112;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+        .service-card .card-content a:hover {
+            background-color: #0a6f0c;
+        }
+        /* قائمة الأنشطة الأخرى */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 50px;
+            text-align: center;
+            width: 100%;
+        }
+        .dropbtn {
+            background-color: #0e8112; /* اللون الأخضر المستخدم */
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            width: 100%; /* لجعل الزر بنفس عرض الصور */
+            border-radius: 12px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+        .dropbtn:hover {
+            background-color: #0a6f0c;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            min-width: 250px;
+            border-radius: 10px;
+            z-index: 1;
+            top: 50px; /* لتحريك القائمة المنسدلة */
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s ease;
+        }
+        .dropdown-content a:hover {
+            background-color: #f0f4f8;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* نموذج الحجز */
+        .form-container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 60px;
+        }
+        .form-container input,
+        .form-container select,
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+        }
+        .form-container button {
+            background-color: #0e8112; /* اللون الأخضر المستخدم */
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-container button:hover {
+            background-color: #0a6f0c;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>الخدمات المقدمة</h1>
+    <a href="major2.html" class="back-button">الرجوع للصفحة الرئيسية</a>
+</header>
+
+<div class="container">
+    <div class="service-card">
+        <img src="نادي.webp" alt="النادي">
+        <div class="card-content">
+            <h3>النادي</h3>
+            <p>استمتع بوقتك في نادي الجولف الرائع لدينا.</p>
+        </div>
+    </div>
+
+    <div class="service-card">
+        <img src="مطعم ص.jpg" alt="المطعم">
+        <div class="card-content">
+            <h3>المطعم</h3>
+            <p>تمتع بتجربة طعام استثنائية في مطعمنا الفاخر.</p>
+        </div>
+    </div>
+
+    <div class="service-card">
+        <img src="للاقامة.png" alt="الإقامة">
+        <div class="card-content">
+            <h3>الإقامة في الفنادق</h3>
+            <p>احجز إقامتك في فنادقنا الفاخرة بالقرب من المنتجع.</p>
+        </div>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">أنشطة أخرى</button>
+    <div class="dropdown-content">
+        <a href="#">مساحة تدريب مضاءة بالأنوار الكاشفة</a>
+        <a href="#">دروس الجولف</a>
+        <a href="#">التدريب الرقمي</a>
+        <a href="#">خدمة المساعدة على حمل أدوات الجولف</a>
+    </div>
+</div>
+
+<div class="form-container">
+    <h2>أدخل بياناتك للحجز</h2>
+    <form action="#">
+        <input type="text" name="firstName" placeholder="الاسم الأول" required>
+        <input type="text" name="lastName" placeholder="اسم العائلة" required>
+        <select name="gender" required>
+            <option value="">الجنس</option>
+            <option value="male">ذكر</option>
+            <option value="female">أنثى</option>
+        </select>
+        <input type="text" name="phone" placeholder="رقم الهاتف" required>
+        <button type="submit">تأكيد الحجز</button>
+    </form>
+</div>
+
+</body>
+</html>
